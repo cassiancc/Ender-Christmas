@@ -22,7 +22,7 @@ import static io.github.tropheusj.ender_christmas.EnderChristmas.CHRISTMAS_ENDER
 public abstract class SheetsMixin {
 	@Inject(cancellable = true, at = @At("RETURN"), method = "getChestTexture(Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/block/enums/ChestType;Z)Lnet/minecraft/client/util/SpriteIdentifier;")
 	private static void enderChristmas$chooseMaterial(BlockEntity blockEntity, ChestType chestType, boolean christmas, CallbackInfoReturnable<SpriteIdentifier> cir) {
-		if (blockEntity instanceof EnderChestBlockEntity) {
+		if (blockEntity instanceof EnderChestBlockEntity && christmas) {
 			cir.setReturnValue(CHRISTMAS_ENDER_CHEST_MATERIAL);
 		}
 	}
