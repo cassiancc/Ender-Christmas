@@ -20,18 +20,13 @@
   "license": "MIT",
   "icon": "assets/ender_christmas/icon.png",
   "environment": "client",
-  "entrypoints": {
-    "client": [
-      "io.github.tropheusj.ender_christmas.EnderChristmas"
-    ]
-  },
   "mixins": [
     "ender_christmas.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.12.12",
     "fabric": ">=0.46.2",
-    "minecraft": ">=1.19.2",
+    "minecraft": ">=1.19.3",
     "java": ">=17"
   }
 }
