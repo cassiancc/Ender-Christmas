@@ -2,19 +2,19 @@ package io.github.tropheusj.ender_christmas;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
-import net.minecraft.client.resources.model.Material;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.inventory.InventoryMenu;
+import net.minecraft.client.util.SpriteIdentifier;
+import net.minecraft.screen.PlayerScreenHandler;
+import net.minecraft.util.Identifier;
 
 public class EnderChristmas implements ClientModInitializer {
-	public static final ResourceLocation CHRISTMAS_ENDER_CHEST_LOCATION = new ResourceLocation("ender_christmas", "ender_christmas");
-	public static final Material CHRISTMAS_ENDER_CHEST_MATERIAL = new Material(
-			InventoryMenu.BLOCK_ATLAS, EnderChristmas.CHRISTMAS_ENDER_CHEST_LOCATION
+	public static final Identifier CHRISTMAS_ENDER_CHEST_LOCATION = new Identifier("ender_christmas", "ender_christmas");
+	public static final SpriteIdentifier CHRISTMAS_ENDER_CHEST_MATERIAL = new SpriteIdentifier(
+			PlayerScreenHandler.BLOCK_ATLAS_TEXTURE, EnderChristmas.CHRISTMAS_ENDER_CHEST_LOCATION
 	);
 
 	@Override
 	public void onInitializeClient() {
-		ClientSpriteRegistryCallback.event(InventoryMenu.BLOCK_ATLAS).register((atlasTexture, registry) ->
+		ClientSpriteRegistryCallback.event(PlayerScreenHandler.BLOCK_ATLAS_TEXTURE).register((atlasTexture, registry) ->
 				registry.register(CHRISTMAS_ENDER_CHEST_LOCATION)
 		);
 	}

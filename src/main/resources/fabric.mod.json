@@ -3,9 +3,10 @@
   "id": "ender_christmas",
   "version": "${version}",
   "name": "Ender Christmas",
-  "description": "Christmas ender chest texture.",
+  "description": "Retextures Ender Chests to have a Christmas texture, like Chests do.",
   "authors": [
     "Tropheus Jay",
+    "Cassian Godsted",
     {
       "name": "ZenithKnight",
       "contact": {
