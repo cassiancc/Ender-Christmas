@@ -24,8 +24,8 @@ public abstract class SheetsMixin {
 
 	@Inject(cancellable = true, at = @At("RETURN"), method = "getChestTextureId(Lnet/minecraft/block/entity/BlockEntity;Lnet/minecraft/block/enums/ChestType;Z)Lnet/minecraft/client/util/SpriteIdentifier;")
 	private static void enderChristmas$chooseMaterial(BlockEntity blockEntity, ChestType chestType, boolean christmas, CallbackInfoReturnable<SpriteIdentifier> cir) {
-		if (blockEntity instanceof EnderChestBlockEntity) {
-			cir.setReturnValue(new SpriteIdentifier(CHEST_ATLAS_TEXTURE, new Identifier("ender_christmas", "entity/chest/ender_christmas")));
+		if (blockEntity instanceof EnderChestBlockEntity && christmas) {
+			cir.setReturnValue(new SpriteIdentifier(CHEST_ATLAS_TEXTURE, Identifier.of("ender_christmas", "entity/chest/ender_christmas")));
 		}
 	}
 }
