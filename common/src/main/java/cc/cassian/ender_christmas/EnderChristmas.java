@@ -12,15 +12,8 @@ public class EnderChristmas
     static public final String MOD_NAME = "Ender Christmas Plus";
     public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
 
-
-
     public static void init() {
         ModConfig.load();
-        LOGGER.info("Successfully initialized Ender Christmas Plus. Have a very merry Christmas!");
+        LOGGER.info("Successfully initialized Ender Christmas Plus. Have a very merry Christmas (everyday)!");
     }
-
-
-
-
-
 }

@@ -21,8 +21,6 @@ public class ClothConfigFactory {
         final var configInstance = ModConfig.get();
         final var generalCategory = builder.getOrCreateCategory(Text.translatable("config.ender_christmas.category"));
 
-
-
         for (var field : ModConfig.class.getFields()) {
             if (field.getType() == boolean.class) {
                 generalCategory.addEntry(entryBuilder.startBooleanToggle(fieldName(field), fieldGet(configInstance, field))

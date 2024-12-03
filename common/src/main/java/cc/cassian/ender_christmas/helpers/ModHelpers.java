@@ -2,15 +2,10 @@ package cc.cassian.ender_christmas.helpers;
 
 import cc.cassian.ender_christmas.config.ModConfig;
 import dev.architectury.injectables.annotations.ExpectPlatform;
-import net.minecraft.block.entity.SignBlockEntity;
 import net.minecraft.text.Text;
 
 import java.lang.reflect.Field;
-import java.util.*;
 import java.util.function.Consumer;
-import java.util.regex.Pattern;
-
-import static cc.cassian.ender_christmas.EnderChristmas.MOD_ID;
 
 
 public class ModHelpers {
@@ -23,11 +18,6 @@ public class ModHelpers {
     @ExpectPlatform
     public static boolean clothConfigInstalled() {
         throw new AssertionError();
-    }
-
-    public static String getSignRowText(SignBlockEntity sign, int row) {
-        StringBuilder builder =  new StringBuilder();
-        return sign.getFrontText().getMessage(row, true).getString();
     }
 
 
